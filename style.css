@@ -1,10 +1,24 @@
+#details-section{
+    display: none;
+}
 #details-section-div{
-    height: 70%;
-    width: 60%;
+    text-align: justify;
+    width: 30%;
     background-color: antiquewhite;
     position: absolute;
-    left: 20%;
+    left: 35%;
     top: 15%;
     text-align: center;
-    display: none;
+    padding: 10px;
+
+}
+#hide-button{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    padding: 6px 15px;
+    background-color: rgb(143, 24, 24);
+    border-radius: 10px;
+    cursor: pointer;
+    border-radius: 10px;
 }
