@@ -4,24 +4,14 @@ document.getElementById('button').addEventListener('click', jsonDataFunction)
 
 function jsonDataFunction() {
   const foodInput = document.getElementById('food-input').value;
-  if (foodInput.length > 1) { //----this line of code is for searching meal by it's name----
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${foodInput}`)
       .then(res => res.json())
       .then(data => getFoodName(data))
-  }
-  else if (foodInput.length === 1) { //----this line of code is for searching meal by it's first name----
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${foodInput}`)
-      .then(res => res.json())
-      .then(data => getFoodName(data))
-  }
-
 }
-
 const getFoodName = foodObj => {
   for (let i = 0; i < foodObj.meals.length; i++) {
     const foodName = foodObj.meals[i].strMeal;
     const foodDisplay = document.getElementById('food-display');
-    //---------------
     const div = document.createElement('div');
     div.className = 'food-container';
     div.innerHTML = `
@@ -40,6 +30,7 @@ const getFoodName = foodObj => {
         `
     foodDisplay.appendChild(div);
   }
+  //------food details section-------
   const foods = document.getElementsByClassName('foods');
   for (let i = 0; i < foods.length; i++) {
     const food = foods[i];
