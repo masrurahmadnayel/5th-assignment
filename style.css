@@ -1,0 +1,10 @@
+#details-section-div{
+    height: 70%;
+    width: 60%;
+    background-color: antiquewhite;
+    position: absolute;
+    left: 20%;
+    top: 15%;
+    text-align: center;
+    display: none;
+}
